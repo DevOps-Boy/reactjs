@@ -1,0 +1,7 @@
+version: '3.9'
+services:
+  webapp:
+    image: test:v1
+    container_name: reactjs
+    ports:
+      - "80:8000"
