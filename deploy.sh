@@ -17,10 +17,10 @@ echo "Enter your Docker Hub password:"
 read -s DOCKERHUB_PASSWORD
 
 # Log in to Docker Hub
-docker login --username "${DOCKERHUB_USERNAME}" --password "${DOCKERHUB_PASSWORD}"
+sudo docker login --username "${DOCKERHUB_USERNAME}" --password "${DOCKERHUB_PASSWORD}"
 
 # Push the image to Docker Hub
-docker push "${DOCKERHUB_REPO}:${TAG}"
+sudo docker push "${DOCKERHUB_REPO}:${TAG}"
 
-docker run -p 8000:8000 "${DOCKERHUB_REPO}:${TAG}"
+sudo docker run -p 8000:8000 "${DOCKERHUB_REPO}:${TAG}"
 
